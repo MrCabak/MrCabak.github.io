@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
   <body>
     <nav class="zone black sticky">
@@ -16,39 +17,20 @@
           <li class="push"><a href="">Log out</a></li>
       </ul>
     </nav>
-  <div class="container"><img class="cover" src="./img/laun.001.jpeg"></div>
-  <div class="zone black tablecenter">
-    <table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+  <div class="containe black">
+    <!--<img class="cover" src="./img/laun.001.jpeg">-->
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1"><font color="white">Launch a process:</font></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <button type="button" class="btn btn-danger btn-lg btn-circle btn-xl" onclick="bottomscreen()">Clear</button>
+        <button type="button" class="btn btn-primary btn-lg btn-circle btn-xl" onclick="bottomscreen()">Submit</button>
+      </div>
+    </form>
+
   </div>
-  <footer class="zone yellow"></footer>
+
+    <footer class="zone black footer"><button  type="button" class=" upbutton btn btn-primary btn-lg" onclick="topscreen()">Scroll Up!</button></footer>
 </div>
 </body>
 </html>
