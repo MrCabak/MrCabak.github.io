@@ -47,3 +47,15 @@ function topscreen(){
 function bottomscreen(){
 	$('html, body').animate({ scrollBottom: 0 }, 'fast');
 }
+
+
+
+function cleartextbox()
+{
+	document.getElementById('processinput').value = "";
+}
+
+
+
+
+
