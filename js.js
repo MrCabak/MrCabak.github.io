@@ -11,12 +11,18 @@ function stoprefreshing()
 	stop = !stop;
 }
 
+var slider = new Slider('#ex1', {
+	formatter: function(value) {
+		return 'Current value: ' + value;
+	}
+});
+
 
 function updatetable()
 {
 	if(stop===false)
 	{
-		setTimeout("updatetable()",2000);
+		setTimeout("updatetable()",1000);
 		for (var i=0; i<2; i++)
 		{
 			var table = document.getElementById("tab");
