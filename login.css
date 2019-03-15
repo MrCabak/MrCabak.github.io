@@ -10,6 +10,10 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
+b{
+  color: white;
+}
+
 h2{
   color:white;
 }
@@ -75,14 +79,14 @@ span.psw {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgb(45, 45, 45); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: rgb(0, 0, 0);
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
@@ -97,6 +101,23 @@ span.psw {
   font-size: 35px;
   font-weight: bold;
 }
+
+.btn-circle.btn-xl {
+  width: 220px;
+  height: 220px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 100px;
+  transition: width 1s;
+  transition: height 1s;
+}
+
+.btn-circle.btn-circle.btn-xl:hover{
+    width: 220px;
+    height: 300px;
+}
+
 
 .close:hover,
 .close:focus {

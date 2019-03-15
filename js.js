@@ -3,6 +3,81 @@ function myDeleteFunction() {
 	document.getElementById("tab").deleteRow(1);
 }
 
+function stopstart(){
+	var check1 = document.getElementById("stop/start");
+	var check2 = "Stop";
+	if(check1.value===check2)
+		{
+			check1.innerHTML = "Start";
+			check1.value="Start";
+			check1.style.background='#000000';
+		}
+		else
+			{
+				check1.innerHTML = "Stop";
+				check1.value="Stop";
+			}
+}
+
+function arrowswap1(){
+	var check1 = document.getElementById("sortpid");
+	var check2 = "Sort by ID ↑";
+	if(check1.value===check2)
+		{
+			check1.innerHTML = "Sort by ID ↓";
+			check1.value="Sort by ID ↓";
+		}
+		else
+			{
+				check1.innerHTML = "Sort by ID ↑";
+				check1.value="Sort by ID ↑";
+			}
+}
+
+function arrowswap2(){
+	var check1 = document.getElementById("sortname");
+	var check2 = "Sort by Name ↑";
+	if(check1.value===check2)
+		{
+			check1.innerHTML = "Sort by Name ↓";
+			check1.value="Sort by ID ↓";
+		}
+		else
+			{
+				check1.innerHTML = "Sort by Name ↑";
+				check1.value="Sort by Name ↑";
+			}
+}
+
+function arrowswap3(){
+	var check1 = document.getElementById("sortcpu");
+	var check2 = "Sort by %CPU ↑";
+	if(check1.value===check2)
+		{
+			check1.innerHTML = "Sort by %CPU ↓";
+			check1.value="Sort by %CPU ↓";
+		}
+		else
+			{
+				check1.innerHTML = "Sort by %CPU ↑";
+				check1.value="Sort by %CPU ↑";
+			}
+}
+
+function arrowswap4(){
+	var check1 = document.getElementById("sortmemory");
+	var check2 = "Sort by Memory ↑";
+	if(check1.value===check2)
+		{
+			check1.innerHTML = "Sort by Memory ↓";
+			check1.value="Sort by Memory ↓";
+		}
+		else
+			{
+				check1.innerHTML = "Sort by Memory ↑";
+				check1.value="Sort by Memory ↑";
+			}
+}
 
 var stop = false;
 
@@ -10,12 +85,6 @@ function stoprefreshing()
 {
 	stop = !stop;
 }
-
-var slider = new Slider('#ex1', {
-	formatter: function(value) {
-		return 'Current value: ' + value;
-	}
-});
 
 
 function updatetable()
