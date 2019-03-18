@@ -26,9 +26,14 @@
 		    <button id="sortcpu" type="button" value="Sort by %CPU ↑" class="btn btn-primary btn-lg btn-circle btn-xl" onclick="arrowswap3()">Sort by %CPU ↑</button>
 		    <button id="sortmemory" type="button" value="Sort by Memory ↑" class="btn btn-primary btn-lg btn-circle btn-xl" onclick="arrowswap4()">Sort by Memory ↑</button>
 		</div>
-	  	<form class="range-field">
-	  		<input type="range" min="0" max="10" />
-		</form>
+		
+		<div class="slidecontainer black">
+		  <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+		</div>
+		<div class="slidecontainer black">
+			<p id="sliderfont">Refreshing frequency: <span id="demo"></span> seconds</p>
+		</div>
+
 		<div class="zone black tablecenter">
 		    <table id="tab" class="table table-striped table-dark">
 			  	<thead>
@@ -41,7 +46,7 @@
 			    	</tr>
 			  	</thead>
 			  	<tbody class="table-striped">
-				   
+				   <!-- Table content gathered from backend -->
 			  	</tbody>
 			</table>
 		</div>
@@ -53,6 +58,18 @@
 
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+		<!-- SLIDER SCRIPT - MUST BE INCLUDED IN THIS HTML FILE! -->
+		<script>
+			var slider = document.getElementById("myRange");
+			var output = document.getElementById("demo");
+			output.innerHTML = slider.value;
+
+			slider.oninput = function() {
+			  output.innerHTML = this.value;
+			}
+		</script>
+
 	</body>
 </html>
 

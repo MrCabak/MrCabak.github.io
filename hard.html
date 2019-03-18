@@ -22,6 +22,14 @@
 	    	<!--<img class="cover" src="./img/hard.001.jpeg">-->
 	    	<button id="stop/start" type="button" value="Stop" class="btn btn-warning  btn-lg btn-circle btn-xl" data-html="true" onclick="stopstart()">Stop</button>
 	  	</div>
+
+	  	<div class="slidecontainer black">
+		  <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+		</div>
+		<div class="slidecontainer black">
+			<p id="sliderfont">Refreshing frequency: <span id="demo"></span> seconds</p>
+		</div>
+
 	  	<div class="zone black tablecenter">
 	    <table class="table table-hover table-dark">
   <thead>
@@ -60,7 +68,18 @@
 	<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<!-- Latest compiled JavaScript -->
+	<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<!-- SLIDER SCRIPT - MUST BE INCLUDED IN THIS HTML FILE! -->
+		<script>
+			var slider = document.getElementById("myRange");
+			var output = document.getElementById("demo");
+			output.innerHTML = slider.value;
+
+			slider.oninput = function() {
+			  output.innerHTML = this.value;
+			}
+		</script>
 	</body>
 </html>
